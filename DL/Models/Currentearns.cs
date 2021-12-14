@@ -9,7 +9,7 @@ namespace DL.Models
 {
     public class Currentearns
     {
-        [Required]
+        [Key]
         public int Idce { get; set; }
         [Required]
         public string Name { get; set; }

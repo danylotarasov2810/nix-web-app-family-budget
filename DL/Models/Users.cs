@@ -9,7 +9,7 @@ namespace DL.Models
 {
     public class Users
     {
-        [Required]
+        [Key]
         public int IdU { get; set; }
         [Required]
         public string Name { get; set; }

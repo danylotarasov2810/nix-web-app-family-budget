@@ -10,8 +10,10 @@ namespace DL.Models
     public class Atriclecosts
     {
         [Required]
+        [MaxLength(50)]
         public int Articleitemcosts { get; set; }
         [Required]
+        [MaxLength(50)]
         public string Namearticlecosts { get; set; }
     }
 }

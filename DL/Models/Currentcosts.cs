@@ -9,11 +9,13 @@ namespace DL.Models
 {
     public class Currentcosts
     {
-        [Required]
+        [Key]
         public int Idcc { get; set; }
         [Required]
+        [MaxLength(25)]
         public string Name { get; set; }
         [Required]
+        [MaxLength(30)]
         public string Surname { get; set; }
         [Required]
         public string Date { get; set; }
