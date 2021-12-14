@@ -12,12 +12,15 @@ namespace DL.Models
         [Key]
         public int IdU { get; set; }
         [Required]
+        [StringLength(50)]
         public string Name { get; set; }
         [Required]
+        [StringLength(50)]
         public string Surname { get; set; }
         [Required]
         public string Relationdegree { get; set; }
         [Required]
+        [Range(1;130)]
         public int Years { get; set; }
         [Required]
         [EmailAddress]
