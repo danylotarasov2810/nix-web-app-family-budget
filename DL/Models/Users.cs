@@ -22,6 +22,9 @@ namespace DL.Models
         [Required]
         [EmailAddress]
         public string Email { get; set; }
+        [Required(ErrorMessage = "Укажите номер телефона")]
+        [RegularExpression("^(?!0+$)(\\+\\d{1,3}[- ]?)?(?!0+$)\\d{10,15}$", ErrorMessage = "Введите правильный номер телефона")]
+        public string Phone{ get; set; }
 
     }
 }
