@@ -22,6 +22,7 @@ namespace DL.Models
         [Required]
         public int Articleitemcosts { get; set; }
         [Required]
+        [Range(1, 1000000)]
         public float Summa { get; set; }
     }
 }

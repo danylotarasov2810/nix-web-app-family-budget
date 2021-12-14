@@ -19,6 +19,9 @@ namespace DL.Models
         public string Relationdegree { get; set; }
         [Required]
         public int Years { get; set; }
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }
 
     }
 }

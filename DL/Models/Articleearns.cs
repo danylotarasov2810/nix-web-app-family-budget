@@ -12,6 +12,7 @@ namespace DL.Models
         [Required]
         public int Articleitemearns { get; set; }
         [Required]
+        [MaxLength(50)]
         public string Namearticleearns { get; set; }
     }
 }
