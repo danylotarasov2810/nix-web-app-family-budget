@@ -12,21 +12,21 @@ namespace DL.Models
         [Key]
         public int IdU { get; set; }
         [Required]
-        [StringLength(50)]
+        [StringLength(10)]
         public string Name { get; set; }
         [Required]
-        [StringLength(50)]
+        [StringLength(15)]
         public string Surname { get; set; }
         [Required]
         public string Relationdegree { get; set; }
         [Required]
-        [Range(1;130)]
+        [Range(1,130)]
         public int Years { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Укажите правильный email")]
         [EmailAddress]
         public string Email { get; set; }
         [Required(ErrorMessage = "Укажите номер телефона")]
-        [RegularExpression("^(?!0+$)(\\+\\d{1,3}[- ]?)?(?!0+$)\\d{10,15}$", ErrorMessage = "Введите правильный номер телефона")]
+        [RegularExpression("^(?!0+$)(\\+\\d{1,3}[- ]?)?(?!0+$)\\d{10,15}$", ErrorMessage = "Enter valid mobile number")]
         public string Phone{ get; set; }
 
     }
