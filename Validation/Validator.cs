@@ -6,7 +6,7 @@ using DL.Models;
 
 namespace Validation // Note: actual namespace depends on the project name.
 {
-    public class Program
+    public class Validator
     {
         public static void Main(string[] args)
         {
@@ -41,7 +41,7 @@ namespace Validation // Note: actual namespace depends on the project name.
 
             var results = new List<ValidationResult>();
             var context = new ValidationContext(user);
-            if (!Validator.TryValidateObject(user, context, results, true))
+            if (!System.ComponentModel.DataAnnotations.Validator.TryValidateObject(user, context, results, true))
             {
                 foreach (var error in results)
                 {
